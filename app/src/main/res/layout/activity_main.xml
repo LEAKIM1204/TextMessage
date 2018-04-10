@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="15dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/inputlayout"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:cacheColorHint="#ff0000"
+            android:gravity="top"
+            android:listSelector="#00000000"
+            android:maxLength="80"
+            android:textSize="20dp"
+            android:background="#b0cff7"
+            android:hint="메시지를 입력하세요"
+            />
+
+        <TextView
+            android:id="@+id/inputCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/inputMessage"
+            android:layout_alignEnd="@+id/inputMessage"
+            android:layout_alignRight="@+id/inputMessage"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:text="0/80 바이트"
+            android:textColor="#350735"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLayout"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendButton"
+                android:textSize="18dp"
+                android:text="전송"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="닫기"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
